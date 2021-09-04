@@ -21,8 +21,8 @@ Route::post('register', [AuthController::class, 'register']);
 Route::post('logout', [AuthController::class, 'logout']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
-Route::get('todos', [ProductController::class, 'index']);
-Route::post('todos', [ProductController::class, 'store']);
-Route::put('todos/{todoId}', [ProductController::class, 'update']);
-Route::delete('todos/{todoId}', [ProductController::class, 'destroy']);
+Route::get('products', [ProductController::class, 'index']);
+Route::post('products', [ProductController::class, 'store']);
+Route::put('products/{todoId}', [ProductController::class, 'update']);
+Route::delete('products/{todoId}', [ProductController::class, 'destroy']);
 });

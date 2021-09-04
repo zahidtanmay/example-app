@@ -4,7 +4,7 @@ import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import NotFoundPage from './pages/NotFoundPage'
 import AuthenticatedBase from './pages/authenticated/AuthenicatedBase'
-import TodoDashboardPage from './pages/authenticated/TodoDashboardPage'
+import ProductPage from './pages/authenticated/ProductPage'
 import LogoutPage from './pages/authenticated/LogoutPage'
 
 const router = new VueRouter({
@@ -12,7 +12,7 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            redirect: {name: 'todo-dashboard'}
+            redirect: {name: 'dashboard'}
         },
         {
             name: 'login',
@@ -30,9 +30,9 @@ const router = new VueRouter({
             meta: {requiresAuth: true},
             children: [
                 {
-                    name: 'todo-dashboard',
-                    path: 'todo-dashboard',
-                    component: TodoDashboardPage,
+                    name: 'dashboard',
+                    path: 'dashboard',
+                    component: ProductPage,
                 },
                 {
                     name: 'logout',

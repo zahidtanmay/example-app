@@ -1962,7 +1962,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.errors = [];
 
                 _this.$router.push({
-                  name: "todo-dashboard"
+                  name: "dashboard"
                 });
 
                 _context.next = 16;
@@ -2111,7 +2111,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 8:
                 _this.$router.push({
-                  name: "todo-dashboard"
+                  name: "dashboard"
                 });
 
                 _this.errors = [];
@@ -2217,10 +2217,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/ProductPage.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/ProductPage.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2230,13 +2230,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _src_apis_Todo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../src/apis/Todo */ "./resources/js/src/apis/Todo.js");
+/* harmony import */ var _src_apis_Product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../src/apis/Product */ "./resources/js/src/apis/Product.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
 //
 //
 //
@@ -2331,7 +2332,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return _src_apis_Todo__WEBPACK_IMPORTED_MODULE_1__["default"].index();
+              return _src_apis_Product__WEBPACK_IMPORTED_MODULE_1__["default"].index();
 
             case 2:
               res = _context.sent;
@@ -2356,7 +2357,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return _src_apis_Todo__WEBPACK_IMPORTED_MODULE_1__["default"].store(_this2.newTodo);
+                return _src_apis_Product__WEBPACK_IMPORTED_MODULE_1__["default"].store(_this2.newTodo);
 
               case 2:
                 res = _context2.sent;
@@ -2382,7 +2383,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context3.prev = _context3.next) {
               case 0:
                 _context3.next = 2;
-                return _src_apis_Todo__WEBPACK_IMPORTED_MODULE_1__["default"]["delete"](id);
+                return _src_apis_Product__WEBPACK_IMPORTED_MODULE_1__["default"]["delete"](id);
 
               case 2:
                 _this3.todos.splice(index, 1);
@@ -2405,7 +2406,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context4.prev = _context4.next) {
               case 0:
                 _context4.next = 2;
-                return _src_apis_Todo__WEBPACK_IMPORTED_MODULE_1__["default"].update(id);
+                return _src_apis_Product__WEBPACK_IMPORTED_MODULE_1__["default"].update(id);
 
               case 2:
                 res = _context4.sent;
@@ -2505,7 +2506,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_RegisterPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/RegisterPage */ "./resources/js/pages/RegisterPage.vue");
 /* harmony import */ var _pages_NotFoundPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/NotFoundPage */ "./resources/js/pages/NotFoundPage.vue");
 /* harmony import */ var _pages_authenticated_AuthenicatedBase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/authenticated/AuthenicatedBase */ "./resources/js/pages/authenticated/AuthenicatedBase.vue");
-/* harmony import */ var _pages_authenticated_TodoDashboardPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/authenticated/TodoDashboardPage */ "./resources/js/pages/authenticated/TodoDashboardPage.vue");
+/* harmony import */ var _pages_authenticated_ProductPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/authenticated/ProductPage */ "./resources/js/pages/authenticated/ProductPage.vue");
 /* harmony import */ var _pages_authenticated_LogoutPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/authenticated/LogoutPage */ "./resources/js/pages/authenticated/LogoutPage.vue");
 
 
@@ -2519,7 +2520,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__["default"]({
   routes: [{
     path: '/',
     redirect: {
-      name: 'todo-dashboard'
+      name: 'dashboard'
     }
   }, {
     name: 'login',
@@ -2536,9 +2537,9 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__["default"]({
       requiresAuth: true
     },
     children: [{
-      name: 'todo-dashboard',
-      path: 'todo-dashboard',
-      component: _pages_authenticated_TodoDashboardPage__WEBPACK_IMPORTED_MODULE_4__["default"]
+      name: 'dashboard',
+      path: 'dashboard',
+      component: _pages_authenticated_ProductPage__WEBPACK_IMPORTED_MODULE_4__["default"]
     }, {
       name: 'logout',
       path: 'logout',
@@ -2642,10 +2643,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/src/apis/Todo.js":
-/*!***************************************!*\
-  !*** ./resources/js/src/apis/Todo.js ***!
-  \***************************************/
+/***/ "./resources/js/src/apis/Product.js":
+/*!******************************************!*\
+  !*** ./resources/js/src/apis/Product.js ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2676,7 +2677,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               return _Csrf__WEBPACK_IMPORTED_MODULE_2__["default"].getCookie();
 
             case 2:
-              return _context.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].get("/todos"));
+              return _context.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].get("/products"));
 
             case 3:
             case "end":
@@ -2696,7 +2697,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               return _Csrf__WEBPACK_IMPORTED_MODULE_2__["default"].getCookie();
 
             case 2:
-              return _context2.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].post("/todos", {
+              return _context2.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].post("/products", {
                 description: data
               }));
 
@@ -2718,7 +2719,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               return _Csrf__WEBPACK_IMPORTED_MODULE_2__["default"].getCookie();
 
             case 2:
-              return _context3.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].put("/todos/".concat(id)));
+              return _context3.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].put("/products/".concat(id)));
 
             case 3:
             case "end":
@@ -2738,7 +2739,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               return _Csrf__WEBPACK_IMPORTED_MODULE_2__["default"].getCookie();
 
             case 2:
-              return _context4.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"]["delete"]("/todos/".concat(id)));
+              return _context4.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"]["delete"]("/products/".concat(id)));
 
             case 3:
             case "end":
@@ -39810,10 +39811,10 @@ component.options.__file = "resources/js/pages/authenticated/LogoutPage.vue"
 
 /***/ }),
 
-/***/ "./resources/js/pages/authenticated/TodoDashboardPage.vue":
-/*!****************************************************************!*\
-  !*** ./resources/js/pages/authenticated/TodoDashboardPage.vue ***!
-  \****************************************************************/
+/***/ "./resources/js/pages/authenticated/ProductPage.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/pages/authenticated/ProductPage.vue ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -39821,8 +39822,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _TodoDashboardPage_vue_vue_type_template_id_72f507c4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TodoDashboardPage.vue?vue&type=template&id=72f507c4& */ "./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=template&id=72f507c4&");
-/* harmony import */ var _TodoDashboardPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TodoDashboardPage.vue?vue&type=script&lang=js& */ "./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ProductPage_vue_vue_type_template_id_575fea05___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductPage.vue?vue&type=template&id=575fea05& */ "./resources/js/pages/authenticated/ProductPage.vue?vue&type=template&id=575fea05&");
+/* harmony import */ var _ProductPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductPage.vue?vue&type=script&lang=js& */ "./resources/js/pages/authenticated/ProductPage.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -39832,9 +39833,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _TodoDashboardPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _TodoDashboardPage_vue_vue_type_template_id_72f507c4___WEBPACK_IMPORTED_MODULE_0__.render,
-  _TodoDashboardPage_vue_vue_type_template_id_72f507c4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _ProductPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ProductPage_vue_vue_type_template_id_575fea05___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ProductPage_vue_vue_type_template_id_575fea05___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -39844,7 +39845,7 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/pages/authenticated/TodoDashboardPage.vue"
+component.options.__file = "resources/js/pages/authenticated/ProductPage.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -39945,10 +39946,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************!*\
-  !*** ./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************/
+/***/ "./resources/js/pages/authenticated/ProductPage.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/pages/authenticated/ProductPage.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -39956,8 +39957,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TodoDashboardPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./TodoDashboardPage.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TodoDashboardPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ProductPage.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/ProductPage.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductPage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -40063,19 +40064,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=template&id=72f507c4&":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=template&id=72f507c4& ***!
-  \***********************************************************************************************/
+/***/ "./resources/js/pages/authenticated/ProductPage.vue?vue&type=template&id=575fea05&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/pages/authenticated/ProductPage.vue?vue&type=template&id=575fea05& ***!
+  \*****************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TodoDashboardPage_vue_vue_type_template_id_72f507c4___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TodoDashboardPage_vue_vue_type_template_id_72f507c4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductPage_vue_vue_type_template_id_575fea05___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductPage_vue_vue_type_template_id_575fea05___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TodoDashboardPage_vue_vue_type_template_id_72f507c4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./TodoDashboardPage.vue?vue&type=template&id=72f507c4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=template&id=72f507c4&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductPage_vue_vue_type_template_id_575fea05___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ProductPage.vue?vue&type=template&id=575fea05& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/ProductPage.vue?vue&type=template&id=575fea05&");
 
 
 /***/ }),
@@ -40535,10 +40536,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=template&id=72f507c4&":
-/*!**************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/TodoDashboardPage.vue?vue&type=template&id=72f507c4& ***!
-  \**************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/ProductPage.vue?vue&type=template&id=575fea05&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/authenticated/ProductPage.vue?vue&type=template&id=575fea05& ***!
+  \********************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40552,11 +40553,11 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h3", [_vm._v("Todo Dashboard")]),
+    _c("h3", [_vm._v("Dashboard")]),
     _vm._v(" "),
     _c("div", { staticClass: "card" }, [
       _c("div", { staticClass: "card-header" }, [
-        _vm._v("\n            Todos\n        ")
+        _vm._v("\n            Products\n        ")
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "card-body" }, [

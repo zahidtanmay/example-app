@@ -4,21 +4,21 @@ import Csrf from "./Csrf";
 export default {
     async index() {
         await Csrf.getCookie();
-        return Api.get("/todos");
+        return Api.get("/products");
     },
 
     async store(data) {
         await Csrf.getCookie();
-        return Api.post(`/todos`, { description: data });
+        return Api.post(`/products`, { description: data });
     },
 
     async update(id) {
         await Csrf.getCookie();
-        return Api.put(`/todos/${id}`);
+        return Api.put(`/products/${id}`);
     },
 
     async delete(id) {
         await Csrf.getCookie();
-        return Api.delete(`/todos/${id}`);
+        return Api.delete(`/products/${id}`);
     }
 };

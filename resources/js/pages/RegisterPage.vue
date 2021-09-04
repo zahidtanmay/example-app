@@ -57,7 +57,7 @@ export default {
                 let res = await User.register(this.form)
                 await localStorage.setItem("auth", "true");
                 await localStorage.setItem("authToken", res.data.token);
-                this.$router.push({ name: "todo-dashboard" });
+                this.$router.push({ name: "dashboard" });
                 this.errors = []
             } catch (error) {
                 if (error.response.status === 422) {

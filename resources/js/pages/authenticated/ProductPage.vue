@@ -1,10 +1,10 @@
 <template>
     <div>
-        <h3>Todo Dashboard</h3>
+        <h3>Dashboard</h3>
 
         <div class="card">
             <div class="card-header">
-                Todos
+                Products
             </div>
 
             <div class="card-body">
@@ -32,12 +32,13 @@
 
                 <div class="container">
                     <form class="row">
-                        <div class="col-md-9"><input
-                            v-model="newTodo"
-                            type="text"
-                            class="form-control"
-                            placeholder="Create a new to-do..."
-                        /></div>
+                        <div class="col-md-9">
+                            <input
+                                v-model="newTodo"
+                                type="text"
+                                class="form-control"
+                                placeholder="Create a new to-do..."
+                            /></div>
                         <div class="col-md-3" style="text-align: center;">
                             <button :disabled="!newTodo" @click.prevent="addTodo" class="btn btn-primary mb-3">Add New Todo</button>
                         </div>
@@ -75,7 +76,7 @@
 </template>
 
 <script>
-import Todo from "../../src/apis/Todo";
+import Product from "../../src/apis/Product";
 
 export default {
     data: () => ({
@@ -83,21 +84,21 @@ export default {
         newTodo: ''
     }),
     async mounted() {
-        let res = await Todo.index()
+        let res = await Product.index()
         this.todos = res.data
     },
     methods: {
         async addTodo() {
-            let res = await Todo.store(this.newTodo)
+            let res = await Product.store(this.newTodo)
             this.todos.push(res.data)
             this.newTodo = ''
         },
         async deleteTodo(id, index) {
-            await Todo.delete(id)
+            await Product.delete(id)
             this.todos.splice(index, 1)
         },
         async completeTodo(id, index) {
-            let res = await Todo.update(id)
+            let res = await Product.update(id)
             this.todos.splice(index, 1, res.data)
         }
     }
