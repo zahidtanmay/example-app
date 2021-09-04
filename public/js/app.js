@@ -2490,26 +2490,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -41013,120 +40993,57 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "card-body" }, [
         _c(
-          "ul",
+          "div",
+          { staticClass: "row" },
           [
             _vm._l(_vm.todos, function(todo, index) {
               return [
-                !todo.completed_at
-                  ? _c(
-                      "li",
-                      {
-                        staticClass: "d-flex align-items-center list-group-item"
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              " border-0 flex-grow-1 text-left shadow-none"
-                          },
-                          [_c("span", [_vm._v(_vm._s(todo.description))])]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass:
-                              "btn btn-outline-primary border-0 ml-2",
-                            on: {
-                              click: function($event) {
-                                return _vm.completeTodo(todo.id, index)
-                              }
+                _c(
+                  "div",
+                  {
+                    staticClass: "card col-md-3",
+                    staticStyle: { width: "18rem" }
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "card-img-top",
+                      attrs: {
+                        src: "/uploads/" + todo.photo,
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body" }, [
+                      _c("h5", { staticClass: "card-title" }, [
+                        _vm._v(_vm._s(todo.name))
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "card-text" }, [
+                        _vm._v(_vm._s(todo.manufactured_year))
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "card-link",
+                          on: {
+                            click: function($event) {
+                              return _vm.deleteTodo(todo.id, index)
                             }
-                          },
-                          [
-                            _vm._v(
-                              "\n                            Complete\n                        "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-outline-danger border-0",
-                            on: {
-                              click: function($event) {
-                                return _vm.deleteTodo(todo.id, index)
-                              }
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "\n                            Delete\n                        "
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  : _vm._e()
+                          }
+                        },
+                        [_vm._v("Delete")]
+                      )
+                    ])
+                  ]
+                )
               ]
             })
           ],
           2
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "container" }, [
-          _c("form", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-md-9" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.newTodo,
-                    expression: "newTodo"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: { type: "text", placeholder: "Create a new to-do..." },
-                domProps: { value: _vm.newTodo },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.newTodo = $event.target.value
-                  }
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "col-md-3",
-                staticStyle: { "text-align": "center" }
-              },
-              [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary mb-3",
-                    attrs: { disabled: !_vm.newTodo },
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        return _vm.addTodo.apply(null, arguments)
-                      }
-                    }
-                  },
-                  [_vm._v("Add New Todo")]
-                )
-              ]
-            )
-          ])
-        ])
+        )
       ])
     ])
   ])

@@ -9,41 +9,21 @@
             </div>
 
             <div class="card-body">
-                <ul>
+                <div class="row">
                     <template v-for="(todo, index) in todos">
-                        <li v-if="!todo.completed_at" class="d-flex align-items-center list-group-item">
-                            <div
-                                class=" border-0 flex-grow-1 text-left shadow-none"
-                            >
-                                <span>{{ todo.description }}</span>
+                        <div class="card col-md-3" style="width: 18rem;">
+                            <img class="card-img-top" :src="`/uploads/${todo.photo}`" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{todo.name}}</h5>
+                                <p class="card-text">{{todo.manufactured_year}}</p>
                             </div>
 
-                            <button
-                                class="btn btn-outline-primary border-0 ml-2"
-                                @click="completeTodo(todo.id, index)"
-                            >
-                                Complete
-                            </button>
-                            <button @click="deleteTodo(todo.id, index)" class="btn btn-outline-danger border-0">
-                                Delete
-                            </button>
-                        </li>
-                    </template>
-                </ul>
-
-                <div class="container">
-                    <form class="row">
-                        <div class="col-md-9">
-                            <input
-                                v-model="newTodo"
-                                type="text"
-                                class="form-control"
-                                placeholder="Create a new to-do..."
-                            /></div>
-                        <div class="col-md-3" style="text-align: center;">
-                            <button :disabled="!newTodo" @click.prevent="addTodo" class="btn btn-primary mb-3">Add New Todo</button>
+                            <div class="card-body">
+                                <a @click="deleteTodo(todo.id, index)" class="card-link">Delete</a>
+                            </div>
                         </div>
-                    </form>
+
+                    </template>
                 </div>
 
             </div>
