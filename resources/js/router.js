@@ -1,11 +1,11 @@
 import VueRouter from "vue-router";
 
-import LoginPage from '@/pages/LoginPage'
-import RegisterPage from '@/pages/RegisterPage'
-import NotFoundPage from '@/pages/NotFoundPage'
-import AuthenticatedBase from '@/pages/authenticated/AuthenicatedBase'
-import TodoDashboardPage from '@/pages/authenticated/TodoDashboardPage'
-import LogoutPage from '@/pages/authenticated/LogoutPage'
+import LoginPage from './pages/LoginPage'
+import RegisterPage from './pages/RegisterPage'
+import NotFoundPage from './pages/NotFoundPage'
+import AuthenticatedBase from './pages/authenticated/AuthenicatedBase'
+import TodoDashboardPage from './pages/authenticated/TodoDashboardPage'
+import LogoutPage from './pages/authenticated/LogoutPage'
 
 const router = new VueRouter({
     mode: 'history',

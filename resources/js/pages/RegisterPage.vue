@@ -7,6 +7,13 @@
                 </div>
                 <div class="card-body">
                     <div class="mb-3">
+                        <label for="loginName" class="form-label">Name</label>
+                        <input v-model="form.name" type="text" class="form-control" id="loginName" required>
+                        <span class="text-danger" v-if="errors.name">
+                            {{ errors.name[0] }}
+                        </span>
+                    </div>
+                    <div class="mb-3">
                         <label for="loginEmail" class="form-label">Email address</label>
                         <input v-model="form.email" type="email" class="form-control" id="loginEmail" required>
                         <span class="text-danger" v-if="errors.email">
