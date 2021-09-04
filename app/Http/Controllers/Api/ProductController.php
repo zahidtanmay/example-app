@@ -23,6 +23,15 @@ class ProductController extends Controller
         return response()->json($todos, 200);
     }
 
+    public function show($id)
+    {
+        $todos = Product::where([
+            'id' => $id,
+            'user_id' => auth()->user()->id
+        ])->first();
+        return response()->json($todos, 200);
+    }
+
     /**
      * Create a new Todo for the authenticated user
      *
@@ -37,7 +46,7 @@ class ProductController extends Controller
             'manufactured_year' => ['required']
         ]);
 
-        if ($request->photo) {
+        if ($request->photo_locator) {
             $file = base64_decode($request['photo']);
             $folderName = 'public/uploads/';
             $safeName = $request->photo_locator;
@@ -60,12 +69,25 @@ class ProductController extends Controller
      * Update a Todo for the authenticated user
      *
      * @param $todoId
+     * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function update($todoId)
+    public function update($todoId, Request $request)
     {
         $todo = Product::find($todoId);
-        $todo->completed_at = Carbon::now()->toDateTimeString();
+
+        $todo->name = $request->name;
+        $todo->manufactured_year = $request->manufactured_year;
+
+        if ($request->photo_locator) {
+            $file = base64_decode($request['photo']);
+            $folderName = 'public/uploads/';
+            $safeName = $request->photo_locator;
+            $destinationPath = public_path() . $folderName;
+            $success = file_put_contents(public_path().'/uploads/'.$safeName, $file);
+        }
+
+        $todo->photo = $request->photo_locator ?? $todo->photo;
         $todo->save();
 
         return response()->json($todo, 200);

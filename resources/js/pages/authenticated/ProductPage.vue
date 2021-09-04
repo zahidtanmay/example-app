@@ -19,6 +19,7 @@
                             </div>
 
                             <div class="card-body">
+                                <a @click="editTodo(todo.id, index)" class="card-link">Edit</a>
                                 <a @click="deleteTodo(todo.id, index)" class="card-link">Delete</a>
                             </div>
                         </div>
@@ -57,6 +58,9 @@ export default {
         async completeTodo(id, index) {
             let res = await Product.update(id)
             this.todos.splice(index, 1, res.data)
+        },
+        editTodo(id, index) {
+            this.$router.push(`products/${id}/edit`)
         },
         addProduct() {
             this.$router.push({ name: "add-product" });

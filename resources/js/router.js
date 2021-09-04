@@ -6,6 +6,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import AuthenticatedBase from './pages/authenticated/AuthenicatedBase'
 import ProductPage from './pages/authenticated/ProductPage'
 import AddProduct from './pages/authenticated/AddProduct'
+import EditProduct from './pages/authenticated/EditProduct'
 import LogoutPage from './pages/authenticated/LogoutPage'
 
 const router = new VueRouter({
@@ -37,8 +38,13 @@ const router = new VueRouter({
                 },
                 {
                   name: 'add-product',
-                  path: 'product/create',
+                  path: 'products/create',
                   component: AddProduct,
+                },
+                {
+                  name: 'edit-product',
+                  path: 'products/:id/edit',
+                  component: EditProduct,
                 },
                 {
                     name: 'logout',

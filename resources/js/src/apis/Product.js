@@ -7,14 +7,19 @@ export default {
         return Api.get("/products");
     },
 
+    async show(id) {
+        await Csrf.getCookie();
+        return Api.get(`/products/${id}`);
+    },
+
     async store(data) {
         await Csrf.getCookie();
         return Api.post(`/products`,  data);
     },
 
-    async update(id) {
+    async update(id, data) {
         await Csrf.getCookie();
-        return Api.put(`/products/${id}`);
+        return Api.put(`/products/${id}`, data);
     },
 
     async delete(id) {
