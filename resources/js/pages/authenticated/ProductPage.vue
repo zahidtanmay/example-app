@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header">
                 Products
-                <button @click.prevent="addProduct" class="btn btn-primary mb-3">Add New Product</button>
+                <button @click.prevent="addProduct" class="btn btn-primary mb-3 add-new-btn">Add New Product</button>
             </div>
 
             <div class="card-body">
@@ -68,3 +68,11 @@ export default {
     }
 }
 </script>
+
+<style>
+.add-new-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+</style>
