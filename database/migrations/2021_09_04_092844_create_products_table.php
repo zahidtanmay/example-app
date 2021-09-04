@@ -17,8 +17,8 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name', 255);
             $table->integer('user_id', false);
-            $table->string('photo_path', 255);
-            $table->timestamp('manufactured_year');
+            $table->string('photo', 255);
+            $table->year('manufactured_year');
             $table->timestamps();
         });
     }

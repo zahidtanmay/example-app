@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
@@ -32,11 +33,24 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => ['required'],
+            'photo' => 'required',
+            'manufactured_year' => ['required']
         ]);
 
+        if ($request->photo) {
+            $file = base64_decode($request['photo']);
+            $folderName = 'public/uploads/';
+            $safeName = $request->photo_locator;
+            $destinationPath = public_path() . $folderName;
+            $success = file_put_contents(public_path().'/uploads/'.$safeName, $file);
+        }
+
+
         $todo = Product::create([
-            'description' => $request->description,
-            'user_id' => auth()->user()->id
+            'name' => $request->name,
+            'photo' => $request->photo_locator,
+            'user_id' => auth()->user()->id,
+            'manufactured_year' => $request->manufactured_year
         ]);
 
         return response()->json($todo, 201);

@@ -5,6 +5,7 @@ import RegisterPage from './pages/RegisterPage'
 import NotFoundPage from './pages/NotFoundPage'
 import AuthenticatedBase from './pages/authenticated/AuthenicatedBase'
 import ProductPage from './pages/authenticated/ProductPage'
+import AddProduct from './pages/authenticated/AddProduct'
 import LogoutPage from './pages/authenticated/LogoutPage'
 
 const router = new VueRouter({
@@ -33,6 +34,11 @@ const router = new VueRouter({
                     name: 'dashboard',
                     path: 'dashboard',
                     component: ProductPage,
+                },
+                {
+                  name: 'add-product',
+                  path: 'product/create',
+                  component: AddProduct,
                 },
                 {
                     name: 'logout',

@@ -9,7 +9,7 @@ export default {
 
     async store(data) {
         await Csrf.getCookie();
-        return Api.post(`/products`, { description: data });
+        return Api.post(`/products`,  data);
     },
 
     async update(id) {

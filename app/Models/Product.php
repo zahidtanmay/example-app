@@ -15,7 +15,7 @@ class Product extends Model
         'id',
         'name',
         'user_id',
-        'photo_path',
+        'photo',
         'manufactured_year'
     ];
 

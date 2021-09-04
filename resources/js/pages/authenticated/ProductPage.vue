@@ -5,6 +5,7 @@
         <div class="card">
             <div class="card-header">
                 Products
+                <button @click.prevent="addProduct" class="btn btn-primary mb-3">Add New Product</button>
             </div>
 
             <div class="card-body">
@@ -48,30 +49,6 @@
             </div>
         </div>
 
-        <div class="card mt-5">
-            <div class="card-header">
-                Completed Todos
-            </div>
-            <div class="card-body">
-                <ul>
-                    <template v-for="todo in todos">
-                        <li v-if="todo.completed_at" class="d-flex align-items-center list-group-item">
-                            <button
-                                class="btn border-0 flex-grow-1 text-left shadow-none"
-                            >
-                                <span>{{ todo.description }}</span>
-                            </button>
-
-                            <button
-                                class="btn border-0 ml-2"
-                            >
-                                Completed at: {{todo.completed_at}}
-                            </button>
-                        </li>
-                    </template>
-                </ul>
-            </div>
-        </div>
     </div>
 </template>
 
@@ -100,6 +77,9 @@ export default {
         async completeTodo(id, index) {
             let res = await Product.update(id)
             this.todos.splice(index, 1, res.data)
+        },
+        addProduct() {
+            this.$router.push({ name: "add-product" });
         }
     }
 }
